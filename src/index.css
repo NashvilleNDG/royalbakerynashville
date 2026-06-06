@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --background: 0 0% 100%;
+    --foreground: 222 47% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 12%;
+    --primary: 222 65% 27%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 40 52% 52%;
+    --secondary-foreground: 222 47% 12%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 222 15% 45%;
+    --accent: 40 52% 52%;
+    --accent-foreground: 222 47% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 222 65% 27%;
+    --radius: 0.625rem;
+
+    /* Gold shimmer gradient for CTA buttons */
+    --gold-shimmer-start: 42 80% 60%;
+    --gold-shimmer-mid:   42 95% 72%;
+    --gold-shimmer-end:   36 70% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* ─── Gold shimmer keyframe ─── */
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-100%) skewX(-15deg); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: translateX(300%) skewX(-15deg); opacity: 0; }
+}
+
+@keyframes float-up {
+  0%   { opacity: 0; transform: translateY(32px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ─── CTA gold buttons ─── */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    110deg,
+    hsl(36 70% 50%) 0%,
+    hsl(42 90% 65%) 40%,
+    hsl(45 95% 74%) 50%,
+    hsl(42 90% 65%) 60%,
+    hsl(36 70% 50%) 100%
+  );
+  background-size: 250% auto;
+  color: hsl(222 65% 22%);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.45) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  opacity: 0;
+}
+
+.btn-gold:hover {
+  animation: gold-shimmer 1.4s linear infinite;
+  box-shadow: 0 0 22px 4px hsla(42, 90%, 65%, 0.55), 0 4px 16px rgba(0,0,0,0.18);
+  transform: translateY(-2px);
+}
+
+.btn-gold:hover::after {
+  animation: shimmer-sweep 0.85s ease forwards;
+}
+
+/* ─── Ghost/outline white buttons (hero, CTA dark) ─── */
+.btn-ghost-white {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-weight: 500;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-ghost-white:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ─── Glassmorphism navbar ─── */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.nav-solid {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border-bottom: 1px solid hsl(40 15% 88%);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+}
+
+/* ─── Section fade-up utility (used with JS IntersectionObserver fallback via framer) ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Gold divider line ─── */
+.gold-divider {
+  height: 2px;
+  width: 56px;
+  background: linear-gradient(90deg, transparent, hsl(42 90% 60%), transparent);
+  margin: 0 auto;
+  border-radius: 999px;
+}
+
+/* ─── Subtle text shimmer on section eyebrows ─── */
+.eyebrow-gold {
+  background: linear-gradient(90deg, hsl(36 70% 48%), hsl(42 90% 65%), hsl(36 70% 48%));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s linear infinite;
+}
+
+/* ─── Card hover lift ─── */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(20, 40, 100, 0.13);
+}
+
+/* ─── Section gold top accent ─── */
+.section-gold-top {
+  border-top: 1px solid transparent;
+  background-image: linear-gradient(hsl(var(--background)), hsl(var(--background))),
+    linear-gradient(90deg, transparent 0%, hsl(42 90% 60% / 0.35) 50%, transparent 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* ─── Hero parallax hint ─── */
+.hero-bg {
+  will-change: transform;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+  }
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 const MENU_PDF = "https://media.base44.com/files/public/6a049c1bb802156b1d1612cd/a92ca7628_RoyalcatererMenu.pdf";
-import { motion } from "framer-motion";
 
 const BG = "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1920&q=80&fit=crop";
 

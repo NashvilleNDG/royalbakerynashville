@@ -1,6 +1,7 @@
-import PageSEO from "../components/shared/PageSEO";
 import React from "react";
+import PageSEO from "../components/shared/PageSEO";
 import PageHero from "../components/shared/PageHero";
+import PackagesSection from "../components/services/PackagesSection";
 import CTASection from "../components/home/CTASection";
 import { motion } from "framer-motion";
 import { Heart, Building2, Cake, GraduationCap, Utensils, Gift, CheckCircle2 } from "lucide-react";
@@ -13,14 +14,14 @@ const services = [
     title: "Wedding Cakes",
     description: "Your wedding day deserves nothing less than perfection. Our wedding cake team works closely with you to design a stunning tiered cake that reflects your love story and delights every guest.",
     features: ["Custom design consultation", "Complimentary tasting session", "Fondant & buttercream finishes", "Fresh floral & sugar flowers", "Delivery & professional setup"],
-    image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=800&q=80&fit=crop",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80&fit=crop",
   },
   {
     icon: Building2,
     title: "Corporate & Business Orders",
     description: "From boardroom pastry platters to company celebration cakes, we deliver polished, professional bakery orders that reflect your brand's standards and impress every guest.",
     features: ["Branded custom cookies & cakes", "Office breakfast pastry boxes", "Conference & event dessert platters", "Holiday gift assortments", "Bulk and recurring order discounts"],
-    image: "https://images.unsplash.com/photo-1587536849024-cb2d22dfafde?w=800&q=80&fit=crop",
+    image: "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=800&q=80&fit=crop",
   },
   {
     icon: Cake,
@@ -112,6 +113,7 @@ export default function Services() {
         </div>
       </section>
 
+      <PackagesSection />
       <CTASection />
 
     </div>

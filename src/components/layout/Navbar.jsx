@@ -19,16 +19,8 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [barVisible, setBarVisible] = useState(true);
   const location = useLocation();
-  const isHome = location.pathname === "/";
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -49,7 +41,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-20 relative">
-          
+
           {/* Logo */}
           <Link to="/" className="flex items-center md:relative absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
             <img
@@ -81,12 +73,12 @@ export default function Navbar() {
             <div className="flex items-center gap-2 border-l pl-5 border-border/40">
               <a href="https://www.instagram.com/royalcateringnashville_" target="_blank" rel="noopener noreferrer"
                 className="w-7 h-7 rounded-full border border-secondary/50 text-secondary flex items-center justify-center transition-all duration-200 hover:bg-secondary/10"
-                aria-label="Royal Bakery on Instagram">
+                aria-label="Royal Bakery Nashville on Instagram">
                 <Instagram className="w-3 h-3" />
               </a>
               <a href="https://www.facebook.com/people/Royal-Catering/61578157525542" target="_blank" rel="noopener noreferrer"
                 className="w-7 h-7 rounded-full border border-secondary/50 text-secondary flex items-center justify-center transition-all duration-200 hover:bg-secondary/10"
-                aria-label="Royal Bakery on Facebook">
+                aria-label="Royal Bakery Nashville on Facebook">
                 <Facebook className="w-3 h-3" />
               </a>
             </div>
@@ -137,16 +129,16 @@ export default function Navbar() {
                   <ShoppingBag className="w-4 h-4" />
                   Order Now
                 </a>
-                <a href={PDF_URL} download="RoyalCatering_Menu.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-primary text-primary font-body text-sm font-semibold">
+                <a href={PDF_URL} download="RoyalBakery_Menu.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-primary text-primary font-body text-sm font-semibold">
                   Download Menu
                 </a>
                 <div className="flex justify-center gap-3">
                   <a href="https://www.instagram.com/royalcateringnashville_" target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary/10 transition-colors" aria-label="Royal Catering Nashville on Instagram">
+                    className="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary/10 transition-colors" aria-label="Royal Bakery Nashville on Instagram">
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a href="https://www.facebook.com/people/Royal-Catering/61578157525542" target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary/10 transition-colors" aria-label="Royal Catering Nashville on Facebook">
+                    className="w-9 h-9 rounded-full border border-secondary/40 flex items-center justify-center text-secondary hover:bg-secondary/10 transition-colors" aria-label="Royal Bakery Nashville on Facebook">
                     <Facebook className="w-4 h-4" />
                   </a>
                 </div>

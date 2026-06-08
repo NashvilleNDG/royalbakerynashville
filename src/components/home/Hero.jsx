@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, ShoppingBag } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ORDER_URL = "https://royalcateringnashville.com/menu";
-import { motion } from "framer-motion";
 
 const BG = "https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?w=1920&q=80&fit=crop";
 

@@ -61,7 +61,7 @@ export default function FAQSection() {
                 aria-expanded={open === i}
               >
                 <h3 className="font-heading text-[17px] text-foreground leading-snug">{faq.q}</h3>
-                <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
+                <div className={`w-10 h-10 sm:w-7 sm:h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
                   open === i ? "bg-secondary text-primary" : "bg-muted text-muted-foreground"
                 }`}>
                   {open === i

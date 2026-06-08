@@ -73,7 +73,7 @@ export default function Navbar() {
                 {link.label}
                 <span className={`absolute -bottom-0.5 left-0 h-px bg-secondary transition-all duration-300 ${
                   location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
-                }`} style={{ backgroundColor: '#0a1f5c' }} />
+                }`} />
               </Link>
             ))}
 

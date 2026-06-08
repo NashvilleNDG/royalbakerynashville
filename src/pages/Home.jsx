@@ -41,7 +41,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className={`text-center py-8 px-4 ${i < 3 ? "lg:border-r border-border/60" : ""} ${i === 2 ? "border-t border-border/60 lg:border-t-0" : ""} ${i === 3 ? "border-t border-border/60 lg:border-t-0" : ""} ${i === 1 ? "border-r border-border/60" : ""}`}
               >
-                <div className="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-2" aria-hidden="true">
+                <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-secondary/15 flex items-center justify-center mx-auto mb-2" aria-hidden="true">
                   <stat.icon className="w-4 h-4 text-secondary" />
                 </div>
                 <p className="font-heading text-4xl text-primary">{stat.value}</p>

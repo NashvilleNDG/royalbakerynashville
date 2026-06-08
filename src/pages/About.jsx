@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Leaf, Heart, Award, Users } from "lucide-react";
 
 const HERO_BG = "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1920&q=80&fit=crop";
-const BAKER_IMG = "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80&fit=crop";
+const BAKER_IMG = "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80&fit=crop";
 
 const values = [
   { icon: Award, title: "Excellence", description: "We hold ourselves to the highest standards in every item we bake and every order we fulfill." },

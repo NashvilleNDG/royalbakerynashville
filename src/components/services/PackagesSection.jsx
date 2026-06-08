@@ -85,7 +85,7 @@ export default function PackagesSection() {
               viewport={{ once: true }}
               className={`relative rounded-2xl border p-8 flex flex-col ${
                 pkg.highlight
-                  ? "border-secondary bg-primary text-white shadow-[0_0_0_1px_hsla(42,90%,60%,0.5),0_20px_60px_rgba(20,40,100,0.25)] scale-[1.03]"
+                  ? "border-secondary bg-primary text-white shadow-[0_0_0_2px_hsla(42,90%,60%,0.6),0_24px_64px_rgba(20,40,100,0.3)]"
                   : "border-border/60 bg-white shadow-sm hover:shadow-md transition-shadow"
               }`}
             >

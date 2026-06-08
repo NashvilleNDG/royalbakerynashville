@@ -2,10 +2,8 @@ import PageSEO from "../components/shared/PageSEO";
 import React from "react";
 import PageHero from "../components/shared/PageHero";
 import CTASection from "../components/home/CTASection";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Heart, Building2, Cake, GraduationCap, Utensils, Gift, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Heart, Building2, Cake, GraduationCap, Utensils, Gift, CheckCircle2 } from "lucide-react";
 
 const HERO_BG = "https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=1920&q=80&fit=crop";
 
@@ -72,9 +70,9 @@ export default function Services() {
       />
       <PageHero title="Our Services" subtitle="Artisan baked goods and custom creations for every occasion" bgImage={HERO_BG} />
 
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background section-gold-top">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="space-y-28">
+          <div className="space-y-20">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -82,7 +80,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-center"
               >
                 <div className={`${i % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative group">
@@ -116,21 +114,6 @@ export default function Services() {
 
       <CTASection />
 
-      <section className="hidden">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <span className="font-body text-xs uppercase tracking-[0.2em] text-secondary font-semibold">Let's Connect</span>
-          <h2 className="font-heading text-4xl text-foreground mt-4 mb-5">Let's Create Your Perfect Order</h2>
-          <p className="font-body text-sm text-muted-foreground mb-4 max-w-xl mx-auto leading-relaxed">
-            Every order is unique. Reach out for a complimentary consultation and personalized quote.
-          </p>
-          <p className="font-body text-xs text-secondary/80 font-medium mb-8">Free consultation · Custom designs · 24hr response time</p>
-          <Link to="/contact">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 font-body font-semibold text-sm px-10 gap-2 h-12">
-              Get Started <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

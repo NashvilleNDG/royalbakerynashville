@@ -89,13 +89,13 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-          <p className="font-body text-sm text-white">
+          <p className="font-body text-xs text-white/70">
             © {new Date().getFullYear()} Royal Bakery. All rights reserved.{" "}
             <span className="text-secondary">Design &amp; Developed By{" "}
               <a href="https://nashvilledigitalgroup.com" target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2 hover:text-secondary/80 transition-colors">Nashville Digital Group</a>
             </span>
           </p>
-          <p className="font-body text-sm text-white">Nashville, TN · (615) 603-1262 · royalcateringnashville@gmail.com</p>
+          <p className="font-body text-xs text-white/70">Nashville, TN · (615) 603-1262 · royalcateringnashville@gmail.com</p>
         </div>
       </div>
     </footer>

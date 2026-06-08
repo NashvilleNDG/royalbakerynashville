@@ -81,7 +81,7 @@ export default function Testimonials() {
               className="relative group rounded-2xl p-7 border border-border/60 bg-muted/30 hover:bg-muted/60 hover:border-secondary/40 transition-all duration-300 flex flex-col"
               style={{ boxShadow: "0 2px 16px rgba(10,23,48,0.07)" }}
             >
-              <div className="absolute top-5 right-6 font-heading text-[68px] leading-none text-secondary/20 select-none pointer-events-none" aria-hidden="true">"</div>
+              <div className="absolute top-5 right-6 font-heading text-5xl sm:text-[68px] leading-none text-secondary/20 select-none pointer-events-none" aria-hidden="true">"</div>
 
               <div className="flex gap-1 mb-4">
                 {[...Array(t.rating)].map((_, j) => (

@@ -6,7 +6,7 @@ export default function SectionHeader({ subtitle, title, light = false }) {
       <span className={`font-body text-sm uppercase tracking-widest font-semibold ${light ? "text-secondary" : "text-secondary"}`}>
         {subtitle}
       </span>
-      <h2 className={`font-heading text-3xl sm:text-4xl mt-3 ${light ? "text-white" : "text-foreground"}`}>
+      <h2 className={`font-heading text-4xl sm:text-5xl mt-3 ${light ? "text-white" : "text-foreground"}`}>
         {title}
       </h2>
       <div className="w-16 h-0.5 bg-secondary mx-auto mt-4" />

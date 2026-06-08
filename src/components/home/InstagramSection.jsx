@@ -48,7 +48,7 @@ export default function InstagramSection() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
           {igImages.map((img, i) => (
             <motion.a
               key={img.src}

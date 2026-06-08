@@ -75,12 +75,12 @@ export default function FeaturedServices() {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-heading text-lg text-foreground mb-2 uppercase tracking-wider">{service.title}</h3>
-                  <p className="font-body text-[13px] text-muted-foreground leading-relaxed">{service.description}</p>
+                  <p className="font-body text-sm sm:text-[13px] text-muted-foreground leading-relaxed">{service.description}</p>
                 </div>
               </Link>
             </motion.div>

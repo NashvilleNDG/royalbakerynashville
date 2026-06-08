@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center pt-28 pb-32">
+      <div className="relative w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center pt-16 pb-20 sm:pt-28 sm:pb-32">
         <motion.div
           variants={container}
           initial="hidden"
@@ -68,7 +68,7 @@ export default function Hero() {
           <motion.div variants={item} className="flex flex-wrap items-center justify-center gap-2 sm:gap-0 mb-10">
             {specialties.map((type, i) => (
               <React.Fragment key={type}>
-                <span className="font-body text-[11px] tracking-[0.18em] uppercase text-white/70 font-medium px-3 sm:px-4">{type}</span>
+                <span className="font-body text-[11px] tracking-[0.18em] uppercase text-white/70 font-medium px-4">{type}</span>
                 {i < specialties.length - 1 && (
                   <span className="hidden sm:inline text-secondary/50 text-lg">|</span>
                 )}

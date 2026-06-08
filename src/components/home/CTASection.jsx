@@ -41,13 +41,13 @@ export default function CTASection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={MENU_PDF} download="RoyalBakery_Menu.pdf" target="_blank" rel="noopener noreferrer">
-              <button className="btn-gold inline-flex items-center gap-2.5 px-9 py-4 rounded-xl text-base font-semibold shadow-xl">
+              <button className="btn-gold inline-flex items-center gap-2.5 px-9 py-4 rounded-full text-base font-semibold shadow-xl">
                 <Download className="w-4 h-4" />
                 Download Menu
               </button>
             </a>
             <a href="tel:6156031262">
-              <button className="btn-ghost-white inline-flex items-center gap-2.5 px-9 py-4 rounded-xl text-base font-medium">
+              <button className="btn-ghost-white inline-flex items-center gap-2.5 px-9 py-4 rounded-full text-base font-medium">
                 <Phone className="w-4 h-4" />
                 (615) 603-1262
               </button>

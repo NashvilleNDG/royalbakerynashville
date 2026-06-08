@@ -50,7 +50,7 @@ export default function HomeContactFAQ() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-6 mb-12">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent to-secondary/40" />
-            <img src={LOGO_URL} alt="Royal Bakery" className="h-[77px] w-auto opacity-80" />
+            <img src={LOGO_URL} alt="Royal Bakery" className="h-[52px] w-auto opacity-80" />
             <div className="flex-1 h-px bg-gradient-to-l from-transparent to-secondary/40" />
           </div>
 
@@ -63,7 +63,7 @@ export default function HomeContactFAQ() {
             </div>
             <div>
               <p className="font-body text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">E-Mail</p>
-              <a href="mailto:royalcateringnashville@gmail.com" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors whitespace-nowrap">
+              <a href="mailto:royalcateringnashville@gmail.com" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors break-all">
                 royalcateringnashville@gmail.com
               </a>
             </div>
@@ -117,7 +117,7 @@ export default function HomeContactFAQ() {
                   className="w-full flex items-center justify-between py-5 text-left gap-4"
                 >
                   <span className="font-body text-[15.4px] text-secondary font-medium leading-snug">{faq.q}</span>
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full border border-secondary/40 flex items-center justify-center text-secondary">
+                  <span className="flex-shrink-0 w-10 h-10 sm:w-7 sm:h-7 rounded-full border border-secondary/40 flex items-center justify-center text-secondary">
                     {openIndex === i ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                   </span>
                 </button>

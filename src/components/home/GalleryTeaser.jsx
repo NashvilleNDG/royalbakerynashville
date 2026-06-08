@@ -25,13 +25,13 @@ export default function GalleryTeaser() {
         >
           <div className="w-full text-center">
             <span className="font-body text-xs tracking-[0.2em] uppercase text-secondary font-semibold">Our Work &amp; Creations</span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-[#0a1f5c] mt-3 leading-tight">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-white mt-3 leading-tight">
               A Taste of Our Finest Creations
             </h2>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4">
           {teaserImages.map((img, i) => (
             <motion.div
               key={img.src}
@@ -39,7 +39,7 @@ export default function GalleryTeaser() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
               viewport={{ once: true }}
-              className="relative group rounded-xl overflow-hidden cursor-pointer aspect-square"
+              className="relative group rounded-xl overflow-hidden cursor-pointer aspect-[4/3]"
             >
               <img
                 src={img.src}

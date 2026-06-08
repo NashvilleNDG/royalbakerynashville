@@ -1,7 +1,6 @@
 import React from "react";
 import PageSEO from "../components/shared/PageSEO";
 import PageHero from "../components/shared/PageHero";
-import PackagesSection from "../components/services/PackagesSection";
 import CTASection from "../components/home/CTASection";
 import { motion } from "framer-motion";
 import { Heart, Building2, Cake, GraduationCap, Utensils, Gift, CheckCircle2 } from "lucide-react";
@@ -113,7 +112,6 @@ export default function Services() {
         </div>
       </section>
 
-      <PackagesSection />
       <CTASection />
 
     </div>

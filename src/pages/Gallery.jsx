@@ -33,8 +33,8 @@ export default function Gallery() {
     if (lightbox === null) return;
     const onKey = (e) => {
       if (e.key === "Escape")     setLightbox(null);
-      if (e.key === "ArrowLeft")  prev();
-      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft")  setLightbox(i => (i - 1 + galleryImages.length) % galleryImages.length);
+      if (e.key === "ArrowRight") setLightbox(i => (i + 1) % galleryImages.length);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);

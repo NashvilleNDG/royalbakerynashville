@@ -17,7 +17,7 @@ const HERO_BG = "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=
 
 const contactInfo = [
   { icon: MapPin, label: "Address", value: "2703 McCampbell Ave, Nashville, TN 37214", href: "https://maps.google.com/?q=2703+McCampbell+Ave+Nashville+TN+37214" },
-  { icon: Phone, label: "Phone", value: "(615) 829-4411  ·  (615) 829-4411", href: "tel:6158294411" },
+  { icon: Phone, label: "Phone", value: "(615) 829-4411  ·  (615) 603-1262", href: "tel:6158294411" },
   { icon: Mail, label: "Email", value: "royalcateringnashville@gmail.com", href: "mailto:royalcateringnashville@gmail.com" },
   { icon: Clock, label: "Hours", value: "Mon–Fri 9AM–7PM  ·  Sat 10AM–6PM", href: null },
 ];

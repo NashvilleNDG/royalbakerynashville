@@ -83,11 +83,10 @@ export default function Navbar() {
               </a>
             </div>
 
-            <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">
-              <button className="font-body text-[12.1px] font-bold tracking-wider uppercase px-6 py-2.5 rounded-full bg-[#0a1f5c] text-white hover:bg-[#0a1f5c]/90 transition-all duration-200 flex items-center gap-2">
-                <ShoppingBag className="w-3.5 h-3.5" />
-                Order Now
-              </button>
+            <a href={ORDER_URL} target="_blank" rel="noopener noreferrer"
+              className="font-body text-[12.1px] font-bold tracking-wider uppercase px-6 py-2.5 rounded-full bg-[#0a1f5c] text-white hover:bg-[#0a1f5c]/90 transition-all duration-200 flex items-center gap-2">
+              <ShoppingBag className="w-3.5 h-3.5" aria-hidden="true" />
+              Order Now
             </a>
           </div>
 

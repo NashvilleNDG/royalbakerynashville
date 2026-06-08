@@ -94,7 +94,7 @@ export default function PackagesSection() {
                 <div className={`absolute -top-3.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-4 py-1 rounded-full text-[10px] font-semibold uppercase tracking-widest font-body shadow-md ${
                   pkg.highlight ? "bg-secondary text-primary" : "bg-primary text-primary-foreground"
                 }`}>
-                  {pkg.highlight && <Star className="w-3 h-3 fill-current" />}
+                  {pkg.highlight && <Star className="w-3 h-3 fill-current" aria-hidden="true" />}
                   {pkg.badge}
                 </div>
               )}
@@ -124,28 +124,30 @@ export default function PackagesSection() {
                     <div className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
                       pkg.highlight ? "bg-secondary/25" : "bg-secondary/15"
                     }`}>
-                      <Check className={`w-2.5 h-2.5 ${pkg.highlight ? "text-secondary" : "text-secondary"}`} />
+                      <Check className={`w-2.5 h-2.5 ${pkg.highlight ? "text-secondary" : "text-secondary"}`} aria-hidden="true" />
                     </div>
                     <span className={`font-body text-sm ${pkg.highlight ? "text-white/85" : "text-foreground/80"}`}>{f}</span>
                   </li>
                 ))}
               </ul>
 
-              <Link to="/contact">
-                {pkg.highlight ? (
-                  <button className="btn-gold w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold">
-                    Get Custom Quote
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                ) : (
-                  <button className={`w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border transition-all duration-200 hover:-translate-y-0.5 ${
-                    "border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary"
-                  }`}>
-                    Get Custom Quote
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                )}
-              </Link>
+              {pkg.highlight ? (
+                <Link
+                  to="/contact"
+                  className="btn-gold w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold"
+                >
+                  Get Custom Quote
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              ) : (
+                <Link
+                  to="/contact"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border transition-all duration-200 hover:-translate-y-0.5 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary"
+                >
+                  Get Custom Quote
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

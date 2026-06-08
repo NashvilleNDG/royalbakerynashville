@@ -78,17 +78,15 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <button className="btn-gold inline-flex items-center gap-2.5 px-10 py-4 rounded-full text-base font-semibold shadow-xl tracking-wide">
-                Order a Custom Creation
-                <ArrowRight className="w-4 h-4" />
-              </button>
+            <Link to="/contact"
+              className="btn-gold inline-flex items-center gap-2.5 px-10 py-4 rounded-full text-base font-semibold shadow-xl tracking-wide">
+              Order a Custom Creation
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <a href={ORDER_URL} target="_blank" rel="noopener noreferrer">
-              <button className="btn-ghost-white inline-flex items-center gap-2.5 px-10 py-4 rounded-full text-base font-medium tracking-wide">
-                <ShoppingBag className="w-4 h-4" />
-                View Menu
-              </button>
+            <a href={ORDER_URL} target="_blank" rel="noopener noreferrer"
+              className="btn-ghost-white inline-flex items-center gap-2.5 px-10 py-4 rounded-full text-base font-medium tracking-wide">
+              <ShoppingBag className="w-4 h-4" />
+              View Menu
             </a>
           </motion.div>
         </motion.div>

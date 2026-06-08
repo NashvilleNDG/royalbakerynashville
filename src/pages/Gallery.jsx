@@ -1,5 +1,5 @@
 import PageSEO from "../components/shared/PageSEO";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import PageHero from "../components/shared/PageHero";
@@ -27,6 +27,18 @@ export default function Gallery() {
 
   const prev = () => setLightbox(i => (i - 1 + galleryImages.length) % galleryImages.length);
   const next = () => setLightbox(i => (i + 1) % galleryImages.length);
+
+  // Keyboard navigation — only active while lightbox is open
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e) => {
+      if (e.key === "Escape")     setLightbox(null);
+      if (e.key === "ArrowLeft")  prev();
+      if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox]);
 
   return (
     <div>
@@ -59,11 +71,16 @@ export default function Gallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: i * 0.03 }}
                 onClick={() => setLightbox(i)}
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setLightbox(i)}
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${img.caption} in fullscreen`}
                 className="relative group rounded-2xl overflow-hidden cursor-zoom-in aspect-[4/3]"
               >
                 <img
                   src={img.src}
                   alt={img.caption}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-5">
@@ -77,10 +94,13 @@ export default function Gallery() {
 
       <CTASection />
 
-      {/* Lightbox */}
+      {/* Accessible lightbox */}
       <AnimatePresence>
         {lightbox !== null && (
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lightbox-caption"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -88,17 +108,19 @@ export default function Gallery() {
             onClick={() => setLightbox(null)}
           >
             <button
+              aria-label="Close image viewer"
               className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
               onClick={() => setLightbox(null)}
             >
-              <X className="w-5 h-5 text-white" />
+              <X className="w-5 h-5 text-white" aria-hidden="true" />
             </button>
 
             <button
+              aria-label="Previous image"
               className="absolute left-4 sm:left-8 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary/40 transition-colors"
               onClick={(e) => { e.stopPropagation(); prev(); }}
             >
-              <ChevronLeft className="w-5 h-5 text-white" />
+              <ChevronLeft className="w-5 h-5 text-white" aria-hidden="true" />
             </button>
 
             <motion.div
@@ -115,17 +137,23 @@ export default function Gallery() {
                 alt={galleryImages[lightbox].caption}
                 className="max-h-[70vh] max-w-full w-auto rounded-xl object-contain shadow-2xl"
               />
-              <p className="font-heading text-lg text-white mt-1">{galleryImages[lightbox].caption}</p>
+              <p id="lightbox-caption" className="font-heading text-lg text-white mt-1">
+                {galleryImages[lightbox].caption}
+              </p>
             </motion.div>
 
             <button
+              aria-label="Next image"
               className="absolute right-4 sm:right-8 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary/40 transition-colors"
               onClick={(e) => { e.stopPropagation(); next(); }}
             >
-              <ChevronRight className="w-5 h-5 text-white" />
+              <ChevronRight className="w-5 h-5 text-white" aria-hidden="true" />
             </button>
 
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 font-body text-xs text-white/40">
+            <div
+              className="absolute bottom-5 left-1/2 -translate-x-1/2 font-body text-xs text-white/40"
+              aria-live="polite"
+            >
               {lightbox + 1} / {galleryImages.length}
             </div>
           </motion.div>

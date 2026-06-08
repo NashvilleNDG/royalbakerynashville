@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function PageHero({ title, subtitle, bgImage }) {
   return (
-    <section className="relative h-[60vh] sm:h-[81rem] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[60vh] sm:h-[75vh] lg:h-[90vh] flex items-center justify-center overflow-hidden">
 
       {/* Background image */}
       <div className="absolute inset-0">

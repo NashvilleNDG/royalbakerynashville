@@ -191,7 +191,7 @@ export default function Menu() {
     <div>
       <PageSEO
         title="Bakery Menu"
-        description="Explore Royal Bakery Nashville's full menu — artisan breads, custom cakes, pastries, croissants, cookies, pies, macarons & more. Fully customizable for any occasion. Call (615) 603-1262."
+        description="Explore Royal Bakery Nashville's full menu — artisan breads, custom cakes, pastries, croissants, cookies, pies, macarons & more. Fully customizable for any occasion. Call (615) 829-4411."
         canonical="https://royalcateringnashville.com/menu"
         schema={{
           "@context": "https://schema.org",
@@ -309,11 +309,11 @@ export default function Menu() {
               </p>
             </div>
             <a
-              href="tel:6156031262"
+              href="tel:6158294411"
               className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary font-body text-sm font-semibold px-7 py-3 rounded-xl whitespace-nowrap transition-colors"
             >
               <Phone className="w-4 h-4" />
-              (615) 603-1262
+              (615) 829-4411
             </a>
           </div>
         </div>

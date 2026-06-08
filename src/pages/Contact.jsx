@@ -17,7 +17,7 @@ const HERO_BG = "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=
 
 const contactInfo = [
   { icon: MapPin, label: "Address", value: "2703 McCampbell Ave, Nashville, TN 37214", href: "https://maps.google.com/?q=2703+McCampbell+Ave+Nashville+TN+37214" },
-  { icon: Phone, label: "Phone", value: "(615) 603-1262  ·  (615) 829-4411", href: "tel:6156031262" },
+  { icon: Phone, label: "Phone", value: "(615) 829-4411  ·  (615) 829-4411", href: "tel:6158294411" },
   { icon: Mail, label: "Email", value: "royalcateringnashville@gmail.com", href: "mailto:royalcateringnashville@gmail.com" },
   { icon: Clock, label: "Hours", value: "Mon–Fri 9AM–7PM  ·  Sat 10AM–6PM", href: null },
 ];
@@ -35,7 +35,7 @@ export default function Contact() {
       setSubmitted(true);
       toast.success("Thank you! We'll be in touch within 24 hours.");
     } catch (err) {
-      toast.error("Something went wrong. Please call us at (615) 603-1262.");
+      toast.error("Something went wrong. Please call us at (615) 829-4411.");
     } finally {
       setSending(false);
     }
@@ -47,7 +47,7 @@ export default function Contact() {
     <div>
       <PageSEO
         title="Contact Us"
-        description="Contact Royal Bakery Nashville for a free consultation and personalized quote. Call (615) 603-1262 or email royalcateringnashville@gmail.com. Located at 2703 McCampbell Ave, Nashville TN 37214."
+        description="Contact Royal Bakery Nashville for a free consultation and personalized quote. Call (615) 829-4411 or email royalcateringnashville@gmail.com. Located at 2703 McCampbell Ave, Nashville TN 37214."
         canonical="https://royalcateringnashville.com/contact"
         schema={{
           "@context": "https://schema.org",
@@ -65,7 +65,7 @@ export default function Contact() {
                 {
                   "@type": "Question",
                   "name": "How do I place a custom cake order at Royal Bakery Nashville?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "Call us at (615) 603-1262, email royalcateringnashville@gmail.com, or fill out the inquiry form on our Contact page. We respond within 24 hours to discuss your order and provide a customized quote." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "Call us at (615) 829-4411, email royalcateringnashville@gmail.com, or fill out the inquiry form on our Contact page. We respond within 24 hours to discuss your order and provide a customized quote." }
                 },
                 {
                   "@type": "Question",
@@ -75,7 +75,7 @@ export default function Contact() {
                 {
                   "@type": "Question",
                   "name": "Does Royal Bakery Nashville offer free consultations?",
-                  "acceptedAnswer": { "@type": "Answer", "text": "Yes! We offer free consultations and complimentary tasting sessions for wedding cake clients. Contact us at (615) 603-1262 or royalcateringnashville@gmail.com to schedule yours." }
+                  "acceptedAnswer": { "@type": "Answer", "text": "Yes! We offer free consultations and complimentary tasting sessions for wedding cake clients. Contact us at (615) 829-4411 or royalcateringnashville@gmail.com to schedule yours." }
                 },
                 {
                   "@type": "Question",

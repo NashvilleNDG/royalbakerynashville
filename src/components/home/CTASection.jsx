@@ -50,11 +50,11 @@ export default function CTASection() {
               Download Menu
             </a>
             <a
-              href="tel:6156031262"
+              href="tel:6158294411"
               className="btn-ghost-white inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full text-base font-medium"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
-              (615) 603-1262
+              (615) 829-4411
             </a>
           </div>
         </motion.div>

@@ -27,8 +27,8 @@ export default function AnnouncementBar() {
             <span className="font-semibold">Fresh baked daily — Summer &amp; Fall orders filling fast</span>
             <span className="text-white/60 mx-1.5">·</span>
             <span className="text-white/70">Reserve your date early.</span>
-            <a href="tel:6156031262" className="ml-1.5 text-secondary underline underline-offset-2 hover:text-white transition-colors font-semibold">
-              Call (615) 603-1262 →
+            <a href="tel:6158294411" className="ml-1.5 text-secondary underline underline-offset-2 hover:text-white transition-colors font-semibold">
+              Call (615) 829-4411 →
             </a>
           </p>
         </div>

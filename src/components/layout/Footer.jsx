@@ -64,8 +64,8 @@ export default function Footer() {
               <div className="flex items-start gap-3 justify-center md:justify-start">
                 <Phone className="w-4 h-4 mt-0.5 text-secondary/70 flex-shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:6156031262" className="font-body text-sm text-white hover:text-secondary transition-colors">(615) 603-1262</a>
                   <a href="tel:6158294411" className="font-body text-sm text-white hover:text-secondary transition-colors">(615) 829-4411</a>
+                  <a href="tel:6156031262" className="font-body text-sm text-white hover:text-secondary transition-colors">(615) 603-1262</a>
                 </div>
               </div>
               <div className="flex items-start gap-3 justify-center md:justify-start">
@@ -95,7 +95,7 @@ export default function Footer() {
               <a href="https://nashvilledigitalgroup.com" target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2 hover:text-secondary/80 transition-colors">Nashville Digital Group</a>
             </span>
           </p>
-          <p className="font-body text-xs text-white/70">Nashville, TN · (615) 603-1262 · royalcateringnashville@gmail.com</p>
+          <p className="font-body text-xs text-white/70">Nashville, TN · (615) 829-4411 · royalcateringnashville@gmail.com</p>
         </div>
       </div>
     </footer>

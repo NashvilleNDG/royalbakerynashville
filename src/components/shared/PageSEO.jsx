@@ -8,7 +8,7 @@ import { useEffect } from "react";
 export default function PageSEO({ title, description, canonical, ogImage, schema }) {
   useEffect(() => {
     const BASE_TITLE = "Royal Bakery Nashville | Custom Cakes & Artisan Bakery Nashville TN";
-    const BASE_DESC  = "Royal Bakery Nashville — Nashville's premier artisan bakery specializing in custom wedding cakes, celebration cakes, pastries, artisan breads, and dessert tables across Middle Tennessee. Free consultation — (615) 603-1262.";
+    const BASE_DESC  = "Royal Bakery Nashville — Nashville's premier artisan bakery specializing in custom wedding cakes, celebration cakes, pastries, artisan breads, and dessert tables across Middle Tennessee. Free consultation — (615) 829-4411.";
     const BASE_CANONICAL = "https://royalcateringnashville.com/";
     const BASE_IMAGE = "https://media.base44.com/images/public/6a049c1bb802156b1d1612cd/3e638a7ac_generated_0f4fae53.png";
 

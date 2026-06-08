@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "How do I contact Royal Bakery to place an order?",
-    a: "You can contact us by calling (615) 603-1262 or (615) 829-4411, emailing royalcateringnashville@gmail.com, or filling out the inquiry form on our Contact page. Our team responds within 24 hours to discuss your order and provide a customized quote.",
+    a: "You can contact us by calling (615) 829-4411 or (615) 603-1262, emailing royalcateringnashville@gmail.com, or filling out the inquiry form on our Contact page. Our team responds within 24 hours to discuss your order and provide a customized quote.",
   },
   {
     q: "Does Royal Bakery make custom wedding cakes?",
@@ -63,17 +63,17 @@ export default function HomeContactFAQ() {
             </div>
             <div>
               <p className="font-body text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">E-Mail</p>
-              <a href="mailto:royalcateringnashville@gmail.com" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors break-all">
+              <a href="mailto:royalcateringnashville@gmail.com" className="font-body text-[13px] text-foreground font-bold hover:text-secondary transition-colors whitespace-nowrap">
                 royalcateringnashville@gmail.com
               </a>
             </div>
             <div>
               <p className="font-body text-[11px] uppercase tracking-[0.22em] text-secondary font-bold mb-3">Telephone</p>
-              <a href="tel:6156031262" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors block">
-                (615) 603-1262
-              </a>
-              <a href="tel:6158294411" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors block mt-1">
+              <a href="tel:6158294411" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors block">
                 (615) 829-4411
+              </a>
+              <a href="tel:6156031262" className="font-body text-[15.4px] text-foreground font-bold hover:text-secondary transition-colors block mt-1">
+                (615) 603-1262
               </a>
             </div>
           </div>

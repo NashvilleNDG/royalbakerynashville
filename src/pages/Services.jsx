@@ -58,7 +58,7 @@ export default function Services() {
     <div>
       <PageSEO
         title="Bakery Services"
-        description="Royal Bakery Nashville offers custom cakes, artisan breads, pastries, wedding cakes, corporate orders, and dessert tables across Middle Tennessee. Free consultation — (615) 603-1262."
+        description="Royal Bakery Nashville offers custom cakes, artisan breads, pastries, wedding cakes, corporate orders, and dessert tables across Middle Tennessee. Free consultation — (615) 829-4411."
         canonical="https://royalcateringnashville.com/services"
         schema={{
           "@context": "https://schema.org",
